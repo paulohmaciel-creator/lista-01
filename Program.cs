@@ -1,25 +1,22 @@
-﻿Console.Write("Informe o valor total da compra: ");
-decimal ValorFinal = decimal.Parse(Console.ReadLine());
+﻿using System;
 
-decimal desconto = 0;
-decimal valorFinal = 0;
-
-
-if (ValorFinal >= 200)
+class Program
 {
-    
-    desconto = ValorFinal * 0.10m;
+    static void Main()
+    {
+        Console.Write("Informe a quantidade de tarefas concluídas: ");
+        int tarefas = int.Parse(Console.ReadLine());
+
+        if (tarefas >= 50)
+        {
+            Console.WriteLine("Meta atingida.");
+            Console.WriteLine("Tarefas concluídas: " + tarefas);
+        }
+        else
+        {
+            int faltaram = 50 - tarefas;
+            Console.WriteLine("Meta não atingida.");
+            Console.WriteLine("Faltaram " + faltaram + " tarefas.");
+        }
+    }
 }
-else
-{
-    
-    desconto = 0;
-}
-
-valorFinal = ValorFinal - desconto;
-
-Console.WriteLine(); 
-
-Console.WriteLine("Valor original: R$ " + ValorFinal);
-Console.WriteLine("Desconto aplicado: R$ " + desconto);
-Console.WriteLine("Valor final: R$ " + valorFinal);
