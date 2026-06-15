@@ -4,23 +4,30 @@ class Program
 {
     static void Main()
     {
-        Console.Write("Informe o primeiro número: ");
-        int num1 = int.Parse(Console.ReadLine());
+        Console.Write("Informe a primeira pontuação: ");
+        int a = int.Parse(Console.ReadLine());
 
-        Console.Write("Informe o segundo número: ");
-        int num2 = int.Parse(Console.ReadLine());
+        Console.Write("Informe a segunda pontuação: ");
+        int b = int.Parse(Console.ReadLine());
 
-        if (num1 > num2)
+        Console.Write("Informe a terceira pontuação: ");
+        int c = int.Parse(Console.ReadLine());
+
+        if (a == b && b == c)
         {
-            Console.WriteLine("O primeiro número é maior.");
-        }
-        else if (num2 > num1)
-        {
-            Console.WriteLine("O segundo número é maior.");
+            Console.WriteLine("As três pontuações são iguais.");
         }
         else
         {
-            Console.WriteLine("Os números são iguais.");
+            int maior = a;
+
+            if (b > maior)
+                maior = b;
+
+            if (c > maior)
+                maior = c;
+
+            Console.WriteLine("Maior pontuação: " + maior);
         }
     }
 }
