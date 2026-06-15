@@ -1,7 +1,9 @@
-﻿ Console.Write("Informe o número final da contagem: ");
+﻿ Console.Write("Informe o número inicial da contagem regressiva: ");
         int n = int.Parse(Console.ReadLine());
 
-        for (int i = 1; i <= n; i++)
+        for (int i = n; i >= 0; i--)
         {
             Console.WriteLine(i);
         }
+
+        Console.WriteLine("Fim da contagem.");
